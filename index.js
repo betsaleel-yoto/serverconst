@@ -8,7 +8,7 @@ const info = require('./routes/infoMailRoutes');
 const realisation = require('./routes/realisationRoutes');
 const cors = require('cors');
 
-const allowedOrigins = ['https://mon-portefolio-245f.vercel.app', 'http://localhost:5174'];
+const allowedOrigins = ['https://mon-portefolio-245f.vercel.app', 'http://localhost:5173'];
 
 app.use(cors({
   origin: (origin, callback) => {
