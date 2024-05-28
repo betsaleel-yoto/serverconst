@@ -7,8 +7,8 @@ router.get('/All',getAllrealisations,)
 
 router.post('/Add',upload.single("photo"),ajouterRealisation)
 
-router.put('/edit',modifierRealisation)
+router.put('/edit/:id',modifierRealisation)
 
-router.delete('/delete',supprimerRealisation)
+router.delete('/delete/:id',supprimerRealisation)
 
 module.exports= router
