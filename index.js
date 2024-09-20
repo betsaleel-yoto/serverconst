@@ -3,9 +3,8 @@ const app = express();
 const port = 3000;
 const path = require("path");
 const bodyParser = require('body-parser');
-const commandes = require('./routes/commandRoutes');
-const info = require('./routes/infoMailRoutes');
-const realisation = require('./routes/realisationRoutes');
+const immo = require('./routes/ajoutimmo');
+const blogs = require('./routes/ajoutBlogs');
 const cors = require('cors');
 
 const allowedOrigins = ['https://mon-portefolio-245f.vercel.app', 'http://localhost:5173'];
@@ -29,11 +28,10 @@ app.use(cors({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'uploads')));
-
-app.use('/orders', commandes);
-app.use('/info-mail', info);
-app.use('/realisation', realisation);
+app.use(express.static(path.join(__dirname, 'uploadsblog')));
+app.use(express.static(path.join(__dirname, 'uploadsimmo')));
+app.use('/blogs', immo);
+app.use('/immo', blogs);
 
 app.listen(port, () => {
   console.log('Le serveur a démarré avec succès au port ' + port);
