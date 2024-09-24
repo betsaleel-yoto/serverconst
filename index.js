@@ -7,7 +7,7 @@ const immo = require('./routes/ajoutimmo');
 const blogs = require('./routes/ajoutBlogs');
 const cors = require('cors');
 
-const allowedOrigins = ['http://127.0.0.1:5500', 'http://localhost:5173'];
+const allowedOrigins = ['http://127.0.0.1:5500', 'http://127.0.0.1:5501'];
 
 app.use(cors({
   origin: (origin, callback) => {
